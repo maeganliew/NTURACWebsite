@@ -486,7 +486,7 @@ https://templatemo.com/tm-538-digital-trend
 
 
 
-  /*---------------------------------------
+/*---------------------------------------
       BLOG            
   -----------------------------------------*/
 
@@ -494,43 +494,61 @@ https://templatemo.com/tm-538-digital-trend
     border-radius: var(--border-radius-small);
     position: relative;
     overflow: hidden;
-  }
+    max-width: 70%; /* Set the maximum width to 70% */
+    margin: 0 auto; /* Center the container horizontally */
+}
 
-  .blog-header img {
+.blog-header img {
     border-radius: var(--border-radius-small);
     display: block;
-  }
+    opacity: 0.5;
+    width: 100%; /* Make the image take full width of the container */
+    height: auto; /* Maintain aspect ratio */
+}
 
-  .blog-header-info {
-    background: linear-gradient(transparent,rgba(0,0,0,0.95));
+.blog-header-info {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
     position: absolute;
     right: 0;
     left: 0;
     bottom: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 2em;
-  }
+}
 
-  .blog-header-info h3 {
-    max-width: 80%;
-  }
+.blog-info h3,
+.blog-header-info h3 {
+    font-family: 'Arial Black', sans-serif; /* Change to Arial Black */
+    font-size: 85px;
+    margin: 0; /* Reset margin */
+    text-align: center; /* Center the text horizontally */
+    line-height: 1; /* Reset line height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    letter-spacing: 10px;
+}
 
-  .blog-header-info a {
+.blog-header-info a {
     color: var(--white-color);
-  }
+}
 
-  .blog-header-info a:hover {
+.blog-header-info a:hover {
     color: var(--secondary-color);
-  }
+}
 
-  .blog-sidebar img {
+.blog-sidebar img {
     border-radius: var(--border-radius-small);
     width: 159px;
     margin-right: 22px;
-  }
+}
 
-  .blog-sidebar h3 {
+.blog-sidebar h3 {
     font-size: 18px;
-  }
+}
 
 
 
