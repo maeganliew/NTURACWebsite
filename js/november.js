@@ -9,23 +9,24 @@ let slideId = Array.from({ length: numSlideshows }, (_, index) => `slideshow${in
 
 // Call showSlides for each slideshow
 for (let i = 0; i < numSlideshows; i++) {
-  showSlides(1, i);
+    showSlides(1, i);
 }
 
 // Next/previous controls for a specific slideshow
 function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
+    showSlides(slideIndex[no] += n, no);
 }
 
 // Thumbnail image controls for a specific slideshow
 function currentSlide(n, no) {
-  showSlides(slideIndex[no] = n, no);
+    showSlides(slideIndex[no] = n, no);
 }
 
 // Show slides for a specific slideshow
 function showSlides(n, no) {
   let i;
   let x = document.getElementById(slideId[no]).getElementsByClassName("mySlides");
+  let dots = document.getElementById(slideId[no]).getElementsByClassName("dot");
 
   if (n > x.length) {
     slideIndex[no] = 1;
@@ -40,7 +41,12 @@ function showSlides(n, no) {
     x[i].classList.remove("fade");
   }
 
+  for (i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+
   x[slideIndex[no] - 1].style.display = "block";
+  dots[slideIndex[no] - 1].classList.add("active");
 
   // Remove the .fade class after a delay (adjust the delay based on your preference)
   setTimeout(() => {

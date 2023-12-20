@@ -20,24 +20,51 @@
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border: none; /* Remove border to fix visibility issue */
   user-select: none;
+  background-color: rgba(0, 0, 0, 0.5); /* Set semi-black background color */
+}
+
+/* Set the initial color of > and < to white */
+.prev::before, .next::before {
+  content: attr(data-content); /* Use the data-content attribute for content */
+  color: white;
+}
+
+/* On hover, change color to black and background to semi-white */
+.prev:hover, .next:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-white background on hover */
+}
+
+.prev:hover::before, .next:hover::before {
+  color: black;
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Add other styles as needed */
+.prev {
+  left: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+/* Include content attribute for the arrows */
+.prev::before, .next::before {
+  content: attr(data-content);
 }
+
+/* Style the content as needed */
+.prev::before, .next::before {
+  font-family: "Arial", sans-serif; /* Change font family if needed */
+}
+
 
 /* Caption text */
 .text {
@@ -64,12 +91,13 @@
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 20px 2px 0; /* Adjust the top margin to create space */
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+
 
 .active, .dot:hover {
   background-color: #717171;

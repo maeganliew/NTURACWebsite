@@ -1,5 +1,5 @@
 // Number of slideshows
-const numSlideshows = 4;
+const numSlideshows = 3;
 
 // Initialize slide indices for each slideshow
 let slideIndex = Array.from({ length: numSlideshows }, () => 1);
