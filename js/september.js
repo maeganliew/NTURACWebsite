@@ -1,13 +1,16 @@
-// Set initial slide indices for each slideshow
-let slideIndex = [1, 1, 1];
+// Number of slideshows
+const numSlideshows = 3;
+
+// Initialize slide indices for each slideshow
+let slideIndex = Array.from({ length: numSlideshows }, () => 1);
 
 // IDs of each slideshow container
-let slideId = ["slideshow1", "slideshow2", "slideshow3"];
+let slideId = Array.from({ length: numSlideshows }, (_, index) => `slideshow${index + 1}`);
 
 // Call showSlides for each slideshow
-showSlides(1, 0);
-showSlides(1, 1);
-showSlides(1, 2);
+for (let i = 0; i < numSlideshows; i++) {
+  showSlides(1, i);
+}
 
 // Next/previous controls for a specific slideshow
 function plusSlides(n, no) {
