@@ -221,6 +221,7 @@ https://templatemo.com/tm-538-digital-trend
 
 
 
+
   /*---------------------------------------
     MENU             
   -----------------------------------------*/
@@ -366,10 +367,14 @@ https://templatemo.com/tm-538-digital-trend
   /*---------------------------------------
      PROJECT              
   -----------------------------------------*/
-
   .project {
-    background: var(--project-bg);
+    padding: 20px; /* Optional: Adjust padding if needed */
   }
+
+  .container-fluid{
+  }
+
+
 
   .project-wrapper {
     position: relative;
