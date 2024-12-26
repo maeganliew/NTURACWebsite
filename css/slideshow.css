@@ -12,6 +12,13 @@
   display: none;
 }
 
+.mySlides img {
+  width: 400px;
+  height: 500px;
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
