@@ -85,7 +85,7 @@ https://templatemo.com/tm-538-digital-trend
                         <div class="col-lg-6 col-12">
                           <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
 
-                            <img src="images/coverphoto.jpg" class="img-fluid" alt="Rotaract Cover Photo">
+                            <img src="images/coverphoto.png" class="img-fluid" alt="Rotaract Cover Photo">
                           </div>
                         </div>
 
@@ -311,7 +311,11 @@ https://templatemo.com/tm-538-digital-trend
 
 
 
-    <footer class="site-footer">
+ <script>
+  const CURRENT_YEAR = new Date().getFullYear();
+</script>
+
+<footer class="site-footer">
       <div class="container">
         <div class="row">
 
@@ -325,7 +329,7 @@ https://templatemo.com/tm-538-digital-trend
             <p>
               <a href="#">
                 <i class="fa fa-envelope mr-2 footer-icon"></i>
-                racntu-secretary@e.ntu.edu.sg
+                ntu.pnp1@gmail.com
               </a>
             </p>
           </div>
@@ -339,12 +343,18 @@ https://templatemo.com/tm-538-digital-trend
           </div>
 
           <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
-            <p class="copyright-text">Copyright &copy; 2023 NTU Rotaract Club
-          </div>
-
+          <p class="copyright-text">
+            Copyright &copy; <span id="footer-year"></span> NTU Rotaract Club
+          </p>          
+        </div>
         </div>
       </div>
     </footer>
+
+    <script>
+      document.getElementById('footer-year').textContent = CURRENT_YEAR;
+    </script>
+
 
 
      <!-- SCRIPTS -->
