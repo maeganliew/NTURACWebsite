@@ -558,8 +558,10 @@ https://templatemo.com/tm-538-digital-trend
     border-radius: var(--border-radius-small);
     display: block;
     opacity: 0.5;
+    object-fit: cover;
     width: 100%; /* Make the image take full width of the container */
     height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 4 / 3;
 }
 
 .blog-header-info {
@@ -791,4 +793,39 @@ https://templatemo.com/tm-538-digital-trend
     .footer-link li {
       margin-left: 0;
     }
+  }
+
+
+
+
+
+  .events-info {
+    background: var(--white-color);
+    border-radius: var(--border-radius-small);
+    position: relative;
+    top: 0; /* Position the info at the bottom of the image */
+    left: 0; /* Align to the left edge of the image */
+    width: 100%; /* Make the width span the entire width of the image */
+    padding: 32px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: flex-start; /* Align the content at the bottom */
+}
+
+.events-wrapper {
+    position: relative;
+    display: flex;          /* 1. Turn on Flexbox */
+    flex-direction: column; /* 2. Stack items vertically */
+    align-items: center;    /* 3. CENTER items horizontally (Fixes the left-sticking) */
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .events-wrapper img {
+    border-radius: var(--border-radius-small);
+    width: 100%;
+    height: auto;
   }
