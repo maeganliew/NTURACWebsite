@@ -800,26 +800,27 @@ https://templatemo.com/tm-538-digital-trend
 
 
   .events-info {
-    background: var(--white-color);
+    background: white;
+    color: var(--primary-color);
     border-radius: var(--border-radius-small);
     position: relative;
-    top: 0; /* Position the info at the bottom of the image */
-    left: 0; /* Align to the left edge of the image */
-    width: 100%; /* Make the width span the entire width of the image */
+    top: 0;
+    left: 0; 
+    width: 100%; 
     padding: 32px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    box-sizing: border-box; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column; /* Stack the elements vertically */
-    justify-content: flex-start; /* Align the content at the bottom */
+    flex-direction: column; 
+    justify-content: flex-start; 
 }
 
 .events-wrapper {
     position: relative;
-    display: flex;          /* 1. Turn on Flexbox */
-    flex-direction: column; /* 2. Stack items vertically */
-    align-items: center;    /* 3. CENTER items horizontally (Fixes the left-sticking) */
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;    
     width: 100%;
     margin-bottom: 40px;
   }
@@ -829,3 +830,15 @@ https://templatemo.com/tm-538-digital-trend
     width: 100%;
     height: auto;
   }
+
+  .october-scroll {
+    aspect-ratio: 2 / 5;     
+    width: 100%;
+    overflow-y: auto;
+}
+
+.october-scroll img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
