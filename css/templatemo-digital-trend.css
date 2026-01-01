@@ -558,8 +558,10 @@ https://templatemo.com/tm-538-digital-trend
     border-radius: var(--border-radius-small);
     display: block;
     opacity: 0.5;
+    object-fit: cover;
     width: 100%; /* Make the image take full width of the container */
     height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 4 / 3;
 }
 
 .blog-header-info {
@@ -792,3 +794,51 @@ https://templatemo.com/tm-538-digital-trend
       margin-left: 0;
     }
   }
+
+
+
+
+
+  .events-info {
+    background: white;
+    color: var(--primary-color);
+    border-radius: var(--border-radius-small);
+    position: relative;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    padding: 32px;
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: flex-start; 
+}
+
+.events-wrapper {
+    position: relative;
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;    
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .events-wrapper img {
+    border-radius: var(--border-radius-small);
+    width: 100%;
+    height: auto;
+  }
+
+  .october-scroll {
+    aspect-ratio: 2 / 5;     
+    width: 100%;
+    overflow-y: auto;
+}
+
+.october-scroll img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
